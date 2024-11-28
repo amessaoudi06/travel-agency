@@ -1,0 +1,349 @@
+:root {
+    --primary-color: #ff4b4b;
+    --secondary-color: #2c3e50;
+    --nav-color: #2c3e5093;
+    --accent-color: #f1c40f;
+    --text-color: #333;
+    --light-bg: #f9f9f9;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+.logo {
+    padding: 0.2rem;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url('https://trustmyscience.com/wp-content/uploads/2019/01/wtc-world-trade-center-attentat-11-septembre-2001-fuite-leak-pirates-informatiques.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+}
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.tagline {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+nav {
+    background: var(--nav-color);
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0,3s;
+}
+nav a:hover {
+    color: var(--accent-color);
+}
+.cta-button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+    background: #ff3333;
+}
+.about {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+.about-grid {
+    
+    margin-top: 2rem;
+}
+.about-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    padding: 2rem; 
+}
+
+#about-img {
+    display: flex;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+
+#about-text{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    z-index: 1;
+}
+.booking {
+    padding: 5rem 2rem;
+    background: var(--secondary-color);
+    color: white;
+}
+.booking-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.booking-form button {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+.booking-form button:hover {
+    background: #ff3333;
+}
+.towers {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+.tower-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.tower-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.tower-card:hover {
+    transform: translateY(-10px);
+    z-index: 1;
+}
+.tower-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.tower-image.eiffel {
+    background-image: url('https://www.largeotetcoltin.com/blog/wp-content/uploads/2023/03/vue-face-Tour-Eiffel.jpg');
+}
+.tower-image.pisa {
+    background-image: url('https://cdn.biketours.com/assets/files/2944/leaning_tower_of_pira_italy_u-andreacevenini.jpg.webp');
+}
+.tower-image.arche {
+    background-image: url('https://www.eiffageconstruction.com/files/live/sites/construction-v2/files/Ouvrage/2017/grande-arche-la-defense/Grande-Arche-La-Defense-210417©T.Beaucap.jpg');
+}
+.tower-image.burj {
+    background-image: url('https://www.voyageavecnous.fr/wp-content/uploads/2022/10/pourquoi-visiter-burj-khalifa.jpg');
+}
+.tower-image.empire {
+    background-image: url('https://cdn-imgix.headout.com/media/images/e783f141025783e733cf2e6f80d745ba-593-new-york-empire-state-building-observatory-tickets-11.jpg?auto=format&w=1222.3999999999999&h=687.6&q=90&fit=crop&ar=16%3A9&crop=faces');
+}
+.tower-image.petronas {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/The_Petronas_Twin_Towers_in_Kuala_Lumpur_%28Malaysia%29.JPG/1024px-The_Petronas_Twin_Towers_in_Kuala_Lumpur_%28Malaysia%29.JPG');
+}
+.tower-image.skytree {
+    background-image: url('https://cdn-imgix.headout.com/media/images/869bd1cf6b66d5f3410786dc8e1fd18e-21120-tokyo-1-day-private-tokyo-sightseeing-tour-car-van-with--english-speaking-driver--02.jpg?auto=format&w=1069.6000000000001&h=687.6&q=90&fit=crop&ar=14%3A9&crop=faces');
+}
+.tower-image.bigben {
+    background-image: url('https://www.fattiretours.com/app/uploads/2022/03/london-big-ben.jpg');
+}
+.tower-image.sydney {
+    background-image: url('https://images.squarespace-cdn.com/content/5bbf1602e6666936ab7aee8e/1541129790241-31CNWGD6NZUOT2MJD573/1750515131.jpg?content-type=image%2Fjpeg');
+}
+.tower-image.ryugyong {
+    background-image: url('https://www.uritours.com/wp-content/uploads/2020/05/ryugyong-hotel-traffic-officer-pyongyang.jpg');
+}
+.tower-image.tokyo {
+    background-image: url('https://cdn-imgix.headout.com/media/images/ff32066eea9e5b3e6ffbdb2f56567d6e-TicketstoTokyoTower6.jpg?fm=pjpg&auto=compress&w=1200&crop=faces&fit=min');
+}
+.tower-image.canton {
+    background-image: url('https://media.lesechos.com/api/v1/images/view/5c36dfe88fe56f450877b805/1280x720/060483531205-web-tete.jpg');
+}
+.tower-card h3, .tower-card p {
+    padding: 1rem;
+}
+.price {
+    display: block;
+    padding: 1rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.pilot {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+.pilot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.pilot-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.pilot-card:hover {
+    transform: translateY(-10px);
+}
+.pilot-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.pilot-image.mustafa {
+    background-image: url('https://cdn.discordapp.com/attachments/1310534512786018405/1311645564794044426/image.png?ex=67499c9f&is=67484b1f&hm=e9b293607a09e81679348a74d01b58b2b9dbe64e552d92006e3f14131aa4d0af&');
+}
+.pilot-image.boris {
+    background-image: url('https://www.mathieuceccarelli.com/wp-content/uploads/2017/09/utilisez_correctement_google_analytics.jpg');
+}
+.pilot-image.clitorine {
+    background-image: url('https://cdn.discordapp.com/attachments/1310534512786018405/1311755675700957234/1732817302252.jpg?ex=674a032c&is=6748b1ac&hm=507cd4542b425856696c3b842f3c62a79643c1c39d0019d5597d3b92d9f931df&');
+}
+.pilot-image.anisse {
+    background-image: url('https://cdn.discordapp.com/attachments/1310534512786018405/1311653395773259827/image.png?ex=6749a3ea&is=6748526a&hm=117a26c6fd2f7bd1afada70b0266a730ecc9fa9f33cbeca25b363ee637b8a6b6&');
+}
+.pilot-card h3, .pilot-card p {
+    padding: 2rem;
+}
+
+.reviews {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.review-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.review-card p {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.review-card cite {
+    color: var(--primary-color);
+    font-weight: bold; 
+}
+.contactus {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+.us-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.aboutus-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.contacts-card:hover {
+    transform: translateY(-10px);
+}
+.contactus-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+.contactus-image.ayman {
+    background-image: url('https://cdn.discordapp.com/attachments/1310534512786018405/1311645564794044426/image.png?ex=67499c9f&is=67484b1f&hm=e9b293607a09e81679348a74d01b58b2b9dbe64e552d92006e3f14131aa4d0af&');
+}
+.contactus-image.nino {
+    background-image: url('https://www.mathieuceccarelli.com/wp-content/uploads/2017/09/utilisez_correctement_google_analytics.jpg');
+}
+.contactus-image.clovis {
+    background-image: url('https://cdn.discordapp.com/attachments/1310534512786018405/1311755675700957234/1732817302252.jpg?ex=674a032c&is=6748b1ac&hm=507cd4542b425856696c3b842f3c62a79643c1c39d0019d5597d3b92d9f931df&');
+}
+.contactus-image.margaux {
+    background-image: url('https://cdn.discordapp.com/attachments/1310534512786018405/1311653395773259827/image.png?ex=6749a3ea&is=6748526a&hm=117a26c6fd2f7bd1afada70b0266a730ecc9fa9f33cbeca25b363ee637b8a6b6&');
+}
+.contactus-card h3, .aboutus-card p {
+    padding: 2rem;
+}
+footer {
+    background: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+footer small {
+    display: block;
+    margin-top: 1rem;
+    color: #999;
+}
